@@ -28,7 +28,6 @@ def display_word(word, guessed_letters):
     """Отображение слова с угаданными буквами"""
     return ' '.join(letter if letter in guessed_letters else '_' for letter in word)
 
-Мизев Евгений, [13.11.2025 22:43]
 def play_game():
     """Основная функция игры"""
     difficulty = get_difficulty()
@@ -75,4 +74,5 @@ def play_game():
     # Проигрыш
     print(f"\nИгра окончена! Загаданное слово: {word}")
     show_hangman(0, max_attempts)
+
     save_score(player_name, 0, word, difficulty)
